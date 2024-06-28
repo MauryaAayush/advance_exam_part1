@@ -28,13 +28,25 @@ import 'dart:convert';
 class Articles {
   String? url, urlToImage, publishedAt, content, author, title, description;
 
-  Articles({this.author,
+  Articles(
+      {this.author,
       this.content,
       this.description,
       this.url,
       this.title,
       this.publishedAt,
       this.urlToImage});
+
+  factory Articles.formJson(Map json) {
+    return Articles(
+        url: json['json'],
+        description: json['description'],
+        author: json['author'],
+        content: json['content'],
+        publishedAt: json['publishedAt'],
+        title: json['title'],
+        urlToImage: json['urlToImage']);
+  }
 }
 
 class Source {
