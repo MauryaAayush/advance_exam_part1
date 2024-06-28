@@ -39,7 +39,7 @@ class Homescreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Check'),
+        child: Text('No Any News Here'),
       ),
     );
   }

@@ -5,7 +5,7 @@ class ApiServices {
 static final ApiServices apiServices = ApiServices();
 
   Future<String?> getServices() async {
-    String link = "https://newsapi.org/v2/top-headlines/sources?apiKey=55ea6dda67504f759ad34b03b63dbfb7";
+    String link = "https://newsapi.org/v2/everything?q=tesla&from=2024-05-28&sortBy=publishedAt&apiKey=55ea6dda67504f759ad34b03b63dbfb7 ";
     Uri url = Uri.parse(link);
     Response response = await http.get(url);
 
