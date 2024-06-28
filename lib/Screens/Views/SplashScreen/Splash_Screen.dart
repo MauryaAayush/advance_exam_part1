@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Center(
         child: GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Homescreen(),));
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Homescreen(),));
           },
           child: Container(
             decoration: BoxDecoration(

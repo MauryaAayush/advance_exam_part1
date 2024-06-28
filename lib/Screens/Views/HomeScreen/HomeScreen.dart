@@ -36,6 +36,15 @@ class Homescreen extends StatelessWidget {
           SizedBox(
             width: 10,
           ),
+          TabBar(tabs: [
+            Text('Popular'),
+            Text('All'),
+            Text('Politics'),
+            Text('Tech'),
+            Text('Health'),
+            Text('Science'),
+            Text('Sports'),
+          ])
         ],
       ),
       body: Center(
