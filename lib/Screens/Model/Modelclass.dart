@@ -28,8 +28,7 @@ import 'dart:convert';
 class Articles {
   String? url, urlToImage, publishedAt, content, author, title, description;
 
-  Articles(
-      {this.author,
+  Articles({this.author,
       this.content,
       this.description,
       this.url,
