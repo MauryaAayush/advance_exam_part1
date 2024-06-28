@@ -14,6 +14,13 @@ class NewsProvider extends ChangeNotifier{
     String? json = await ApiServices.apiServices.getServices();
     finaldata = jsonDecode(json!);
 
+    print(finaldata);
+  }
+
+  NewsProvider(){
+    getValue();
   }
 
 }
+
+
