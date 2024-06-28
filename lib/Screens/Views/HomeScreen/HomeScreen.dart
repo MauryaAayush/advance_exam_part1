@@ -36,7 +36,6 @@ class Homescreen extends StatelessWidget {
           SizedBox(
             width: 10,
           ),
-
         ],
       ),
       body: Center(
