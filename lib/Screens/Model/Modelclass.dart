@@ -23,10 +23,9 @@
 //
 // }
 
-import 'dart:convert';
-
 class Articles {
   String? url, urlToImage, publishedAt, content, author, title, description;
+  Source? source;
 
   Articles(
       {this.author,
@@ -35,6 +34,7 @@ class Articles {
       this.url,
       this.title,
       this.publishedAt,
+      this.source,
       this.urlToImage});
 
   factory Articles.formJson(Map json) {
@@ -45,6 +45,8 @@ class Articles {
         content: json['content'],
         publishedAt: json['publishedAt'],
         title: json['title'],
+        source: Source.fromJson(json['source']),
+        // source: json['source'],
         urlToImage: json['urlToImage']);
   }
 }

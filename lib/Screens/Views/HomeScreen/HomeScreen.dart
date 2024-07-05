@@ -1,4 +1,6 @@
+import 'package:advance_exam_part1/Screens/Controller/NewsProvider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Homescreen extends StatelessWidget {
   const Homescreen({super.key});
@@ -38,8 +40,19 @@ class Homescreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Text('No Any News Here'),
+      body: Consumer<NewsProvider>(
+        builder: (context, value, child) {
+          if(value.isLoading)
+            {
+              return  Center(
+                child: Text('No Any News Here'),
+              );
+            }
+          else
+            {
+              return Center(child: Text(value.dataValue[0].title!),);
+            }
+        },
       ),
     );
   }
