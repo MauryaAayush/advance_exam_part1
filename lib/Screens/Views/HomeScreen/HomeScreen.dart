@@ -42,16 +42,15 @@ class Homescreen extends StatelessWidget {
       ),
       body: Consumer<NewsProvider>(
         builder: (context, value, child) {
-          if(value.isLoading)
-            {
-              return  Center(
-                child: Text('No Any News Here'),
-              );
-            }
-          else
-            {
-              return Center(child: Text(value.dataValue[0].title!),);
-            }
+          if (value.isLoading) {
+            return Center(
+              child: Text('No Any News Here'),
+            );
+          } else {
+            return Center(
+              child: Text(value.dataValue[0].title!),
+            );
+          }
         },
       ),
     );
